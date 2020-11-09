@@ -27,7 +27,7 @@ let pokemonList = [
   {name: 'Butterfree',
   height: 1.1,
   weight: 32,
-  types: 'bug', 'flying'}
+  types: ['bug', 'flying']}
 ];
 
 for (let i = 0; i < pokemonList.length; i++) {
