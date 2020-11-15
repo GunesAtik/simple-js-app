@@ -30,10 +30,10 @@ let pokemonList = [
   types: ['bug', 'flying']}
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height > 1.0){
-document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow, thats big! </p>");
+pokemonList.forEach(function(pokemon) {
+  if (pokemon.height > 1.0){
+  document.write("<p>" + pokemon.name + " (height: " + pokemon.height + ") - Wow, thats big! </p>");
 } else {
-  document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ")</p>");
-}
-}
+  document.write("<p>" + pokemon.name + " (height: " + pokemon.height + ")</p>");
+  }
+});
