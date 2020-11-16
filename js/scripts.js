@@ -45,11 +45,11 @@ function add(pokemon) {
  };
 })();
 
-pokemonRepository.add({name: 'Oddish'});
+pokemonRepository.add({name: 'Oddish', height: 0.5, weight: 5.4, types: ['grass', 'poison']});
 
 pokemonRepository.getAll().forEach(function(pokemon) {
 if (pokemon.height > 1.0){
-document.write("<p>" + pokemon.name + " (height: " + pokemon.height + ") - Wow, thats big! </p>");
+document.write("<p>" + pokemon.name + " ( weight: " + pokemon.weight + ", height: " + pokemon.height + ") - Wow, thats big! </p>");
 } else {
-document.write("<p>" + pokemon.name + " (height: " + pokemon.height + ") </p>")};
+document.write("<p>" + pokemon.name + " ( weight: " + pokemon.weight + ", height: " + pokemon.height + ") </p>")};
 });
