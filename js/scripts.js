@@ -46,5 +46,7 @@ function add(pokemon) {
 })();
 
 console.log(pokemonRepository.getAll());
+document.write(pokemonRepository.getAll());
 pokemonRepository.add({name: 'Oddish'});
 console.log(pokemonRepository.getAll());
+document.write(pokemonRepository.getAll());
