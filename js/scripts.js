@@ -50,3 +50,7 @@ document.write(pokemonRepository.getAll());
 pokemonRepository.add({name: 'Oddish'});
 console.log(pokemonRepository.getAll());
 document.write(pokemonRepository.getAll());
+
+pokemonList.forEach(function(pokemon) {
+  if (pokemon.height > 1.0){
+  document.write("<p>" + pokemon.name + " (height: " + pokemon.height + ") - Wow, thats big! </p>");
