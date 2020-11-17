@@ -51,5 +51,7 @@ pokemonRepository.add({name: 'Oddish', height: 0.5, weight: 5.4, types: ['grass'
 pokemonRepository.getAll().forEach(function(pokemon) {
   let pokemonList = document.querySelector('.pokemon-list');
   let listItem = document.createElement('li');
-
+  let button = document.createElement('button');
+  button.innerText = 'placeholder';
+  button.classList.add('button-class);')
 });
