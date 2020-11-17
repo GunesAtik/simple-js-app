@@ -49,12 +49,6 @@ pokemonRepository.add({name: 'Oddish', height: 0.5, weight: 5.4, types: ['grass'
 , 'poison']});
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-if (pokemon.height > 1.0){
-
-document.write('<p>' + pokemon.name + '<br>' + 'weight: ' + pokemon.weight + '<br>' + 'height: '
-+ pokemon.height + ' - Wow, thats big!' + '<br>' + 'Types: ' + pokemon.types + '</p>');
-
-} else {
-document.write('<p>' + pokemon.name + '<br>' + 'weight: ' + pokemon.weight + '<br>' + 'height: '
- + pokemon.height + '<br>' + 'Types: ' + pokemon.types + '</p>')};
+  let pokemonList = document.querySelector('.pokemon-list');
+  
 });
