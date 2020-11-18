@@ -1,5 +1,5 @@
 var pokemonRepository = (function() {
-let pokemonList = [
+let repository = [
   {name:'Bulbasaur',
   height: 0.7,
   weight:6.9,
@@ -32,16 +32,27 @@ let pokemonList = [
 ];
 
 function add(pokemon) {
-   pokemonList.push(pokemon);
+   repository.push(pokemon);
  }
 
  function getAll() {
-   return pokemonList;
+   return repository;
  }
+
+function addListItem(pokemon) {
+  let pokemonList = document.querySelector('.pokemon-list');
+  let listItem = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('button-class');
+  listItem.appendChild(button);
+  pokemonList.appendChild(listItem);
+}
 
  return {
    add: add,
    getAll: getAll
+   addListItem: addListItem
  };
 })();
 
@@ -49,12 +60,5 @@ pokemonRepository.add({name: 'Oddish', height: 0.5, weight: 5.4, types: ['grass'
 , 'poison']});
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-  let pokemonList = document.querySelector('.pokemon-list');
-  let listItem = document.createElement('li');
-  let button = document.createElement('button');
-  button.innerText = pokemon.name;
-  button.classList.add('button-class);')
-  listItem.appendChild(button);
-  pokemonList.appendChild(listItem);
-
+  pokemonRepository.addListItem(pokemon);
 });
