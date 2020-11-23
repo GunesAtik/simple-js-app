@@ -76,13 +76,12 @@ function loadList() {
  return {
    add: add,
    getAll: getAll,
-   addListItem: addListItem
- };
+   loadList: loadList
+  };
 })();
 
-pokemonRepository.add({name: 'Oddish', height: 0.5, weight: 5.4, types: ['grass'
-, 'poison']});
-
-pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon);
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function(pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
 });
