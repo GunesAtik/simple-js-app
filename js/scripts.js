@@ -1,35 +1,5 @@
 var pokemonRepository = (function() {
-let repository = [
-  {name:'Bulbasaur',
-  height: 0.7,
-  weight:6.9,
-  types: ['grass', ' poison']},
-
-  {name:'Pikachu',
-  height: 0.4,
-  weight: 6,
-  types: ['electric']},
-
-  {name: 'Jigglypuff',
-  height: 0.5,
-  weight: 5.5,
-  types: ['fairy', ' normal']},
-
-  {name: 'Horsea',
-  height: 0.4,
-  weight: 8,
-  types: ['water']},
-
-  {name: 'Charizard',
-  height: 1.7,
-  weight: 90.5,
-  types: ['fire', ' flying']},
-
-  {name: 'Butterfree',
-  height: 1.1,
-  weight: 32,
-  types: ['bug', ' flying']}
-];
+let repository = [];
 let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 function add(pokemon) {
