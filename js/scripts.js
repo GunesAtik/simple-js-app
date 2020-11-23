@@ -30,6 +30,7 @@ let repository = [
   weight: 32,
   types: ['bug', ' flying']}
 ];
+let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 function add(pokemon) {
    repository.push(pokemon);
@@ -54,6 +55,22 @@ function addListItem(pokemon) {
 
 function showDetails(pokemon) {
   console.log(pokemon);
+}
+
+function loadList() {
+  return fetch(apiUrl).then(function (response) {
+    return response.json();
+  }).then(function (json) {
+    json.results.forEach(function (item) {
+      let pokemon = {
+        name: item.name,
+        detailsUrl: item.url
+      };
+      add(pokemon);
+    });
+  }).catch(function (e) {
+    console.error(e);
+  })
 }
 
  return {
