@@ -6,7 +6,7 @@ function add(pokemon) {
   if (
     typeof pokemon === "object" &&
     "name" in pokemon
-  ) {
+  ){
    repository.push(pokemon);
  } else {
    console.log("pokemon is not correct");
@@ -76,7 +76,6 @@ function showDetails(pokemon) {
       closeButtonElement.innerText = 'Close';
       closeButtonElement.addEventListener('click', hideModal);
 
-
       let titlePokemon = document.createElement('h1');
       titlePokemon.innerText = item.name;
 
@@ -100,6 +99,7 @@ function showDetails(pokemon) {
       hideModal();
     }
   });
+  
   modalContainer.addEventListener('click',(e) => {
     let target = e.target;
     if (target === modalContainer) {
