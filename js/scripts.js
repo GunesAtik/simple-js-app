@@ -80,7 +80,7 @@ function showDetails(pokemon) {
       titlePokemon.innerText = item.name;
 
       let contentPokemon = document.createElement('p');
-      contentPokemon.innertext = item.height;
+      contentPokemon.innerText = item.height;
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titlePokemon);
