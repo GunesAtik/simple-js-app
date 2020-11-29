@@ -79,12 +79,16 @@ function showDetails(pokemon) {
       let titlePokemon = document.createElement('h1');
       titlePokemon.innerText = item.name;
 
-      let contentPokemon = document.createElement('p');
-      contentPokemon.innerText = item.height;
+      let heightPokemon = document.createElement('p');
+      heightPokemon.innerText = 'Height: ' + item.height;
+
+      let imagePokemon = document.createElement('img');
+      imagePokemon.src = ''
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titlePokemon);
-      modal.appendChild(contentPokemon);
+      modal.appendChild(heightPokemon);
+      modal.appendChild(imagePokemon);
       modalContainer.appendChild(modal);
 
       modalContainer.classList.add('is-visible');
