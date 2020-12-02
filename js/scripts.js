@@ -83,7 +83,7 @@ function showDetails(pokemon) {
       heightPokemon.innerText = 'Height: ' + item.height;
 
       let imagePokemon = document.createElement('img');
-      imagePokemon.src = ''
+      imagePokemon.setAttribute('src', item.imageUrl);
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titlePokemon);
