@@ -68,50 +68,50 @@ function showDetails(pokemon) {
     showModal(pokemon);
   })}
 
-    function showModal(item) {
-      modalContainer.innerHTML = '';
-      let modal = document.createElement('div');
-      modal.classList.add('modal');
+    // function showModal(item) {
+      //modalContainer.innerHTML = '';
+      //let modal = document.createElement('div');
+      //modal.classList.add('modal');
 
-      let closeButtonElement = document.createElement('button');
-      closeButtonElement.classList.add('modal-close');
-      closeButtonElement.innerText = 'Close';
-      closeButtonElement.addEventListener('click', hideModal);
+      //let closeButtonElement = document.createElement('button');
+      //closeButtonElement.classList.add('modal-close');
+      //closeButtonElement.innerText = 'Close';
+      //closeButtonElement.addEventListener('click', hideModal);
 
-      let titlePokemon = document.createElement('h1');
-      titlePokemon.innerText = item.name;
+      //let titlePokemon = document.createElement('h1');
+      //titlePokemon.innerText = item.name;
 
-      let heightPokemon = document.createElement('p');
-      heightPokemon.innerText = 'Height: ' + item.height;
+      //let heightPokemon = document.createElement('p');
+      //heightPokemon.innerText = 'Height: ' + item.height;
 
-      let imagePokemon = document.createElement('img');
-      imagePokemon.setAttribute('src', item.imageUrl);
+      //let imagePokemon = document.createElement('img');
+      //imagePokemon.setAttribute('src', item.imageUrl);
 
-      modal.appendChild(closeButtonElement);
-      modal.appendChild(titlePokemon);
-      modal.appendChild(heightPokemon);
-      modal.appendChild(imagePokemon);
-      modalContainer.appendChild(modal);
+      //modal.appendChild(closeButtonElement);
+      //modal.appendChild(titlePokemon);
+      //modal.appendChild(heightPokemon);
+      //modal.appendChild(imagePokemon);
+      //modalContainer.appendChild(modal);
 
-      modalContainer.classList.add('is-visible');
-    }
+      //modalContainer.classList.add('is-visible');
+    //}
 
-    function hideModal() {
-      modalContainer.classList.remove('is-visible');
-    }
+    //function hideModal() {
+      //modalContainer.classList.remove('is-visible');
+    //}
 
-    window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();
-    }
-  });
+  //  window.addEventListener('keydown', (e) => {
+  //  if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+      //hideModal();
+    //}
+  //});
 
-  modalContainer.addEventListener('click',(e) => {
-    let target = e.target;
-    if (target === modalContainer) {
-      hideModal();
-    }
-  });
+  //modalContainer.addEventListener('click',(e) => {
+  //  let target = e.target;
+  //  if (target === modalContainer) {
+    //  hideModal();
+  //  }
+  //});
 
  return {
    add: add,
