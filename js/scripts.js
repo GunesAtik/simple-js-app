@@ -24,7 +24,7 @@ function addListItem(pokemon) {
   button.innerText = pokemon.name;
   button.classList.add('button-class');
   button.classList.add('btn', 'btn-primary');
-  
+
   button.setAttribute('data-target', '#pokemonModal')
   button.setAttribute('data-toggle', 'modal');
 
@@ -158,5 +158,5 @@ function showDetails(pokemon) {
 pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
-  });
+  })
 });
