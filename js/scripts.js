@@ -24,13 +24,17 @@ function addListItem(pokemon) {
   button.innerText = pokemon.name;
   button.classList.add('button-class');
   button.classList.add('btn', 'btn-primary');
+  
+  button.setAttribute('data-target', '#pokemonModal')
+  button.setAttribute('data-toggle', 'modal');
+
   listItem.appendChild(button);
   pokemonList.appendChild(listItem);
   listItem.classList.add('group-list-item');
   button.addEventListener('click', function(event) {
   showDetails(pokemon);
   })
-}
+  }`
 
 function loadList() {
   return fetch(apiUrl).then(function (response) {
@@ -128,9 +132,8 @@ function showDetails(pokemon) {
     let heightElement = $('<p>' + 'Height: ' + item.height + '</p>');
     let weightElement = $('<p>' + 'Weight: ' + item.weight + '</p>');
     let typesElement = $(
-      '<p>' + 'Types: ' + item.types.toString().replace(',', ', ') + '</p>';
-    let abilitiesElement = $('<p>' + 'abilities :' + item.abilities + '</p>';)
-    );
+      '<p>' + 'Types: ' + item.types.toString().replace(',', ', ') + '</p>');
+    let abilitiesElement = $('<p>' + 'abilities :' + item.abilities + '</p>');
 
     modalTitle.append(nameElement);
     modalBody.append(imageElementFront);
