@@ -58,6 +58,7 @@ function loadDetails(item) {
   }).then(function (details) {
     item.imageUrl = details.sprites.front_default;
     item.height = details.height;
+    item.weight = details.weight;
     item.types = details.types.map(function(pokemon) {
     return pokemon.type.name;
     });
@@ -81,12 +82,13 @@ let nameElement = $('<h1>' + item.name + '</h1>');
 let imageElement = $('<img class="modal-image" style="width:50%">');
 imageElement.attr('src', item.imageUrl);
 let heightElement = $('<p>' + 'Height: ' + item.height + '</p>');
-let typesElement = $(
-'<p>' + 'Types: ' + item.types + '</p>');
+let weightElement = $('<p>' + 'Weight: ' + item.weight + '</p>');
+let typesElement = $('<p>' + 'Types: ' + item.types + '</p>');
 
 modalTitle.append(nameElement);
 modalBody.append(imageElement);
 modalBody.append(heightElement);
+modalBody.append(weightElement);
 modalBody.append(typesElement);
 }
 

@@ -26,13 +26,10 @@ body {
 
 .modal-body {
   background-color: #DC143C;
+  color: #FFFFFF
 }
 
 .modal-header {
-  background-color: #008B8B;
   text-transform: capitalize;
-}
-
-.modal-footer {
-  background-color: #008B8B;
+  text-align: center;
 }
