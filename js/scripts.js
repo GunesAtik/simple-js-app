@@ -83,7 +83,7 @@ let imageElement = $('<img class="modal-image">');
 imageElement.attr('src', item.imageUrl);
 let heightElement = $('<p>' + 'Height: ' + item.height + '</p>');
 let weightElement = $('<p>' + 'Weight: ' + item.weight + '</p>');
-let typesElement = $('<p>' + 'Types: ' + item.types + '</p>');
+let typesElement = $('<p>' + 'Types: ' + item.types.join(", ") + '</p>');
 
 modalTitle.append(nameElement);
 modalBody.append(imageElement);
