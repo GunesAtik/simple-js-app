@@ -1,0 +1,39 @@
+.button-class {
+padding: 16px 32px;
+display: inline-block;
+margin: 4px 2px;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+border: 1px solid #000000;
+background-color: #008B8B;
+width: 200px;
+text-transform: capitalize;
+}
+
+body {
+  text-align: center;
+}
+
+.navbar {
+  background-color: #DC143C;
+  padding: 8px 40px 8px 16px;
+}
+
+.page-container {
+  margin-top: 90px;
+}
+
+.modal-body {
+  background-color: #DC143C;
+  color: #FFFFFF
+}
+
+.modal-header {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.btn-primary:hover {
+background-color: #5F9EA0 !important;
+}
