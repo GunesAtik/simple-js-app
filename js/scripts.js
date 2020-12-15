@@ -79,7 +79,7 @@ modalTitle.empty();
 modalBody.empty();
 
 let nameElement = $('<h1>' + item.name + '</h1>');
-let imageElement = $('<img class="modal-image" style="width:50%">');
+let imageElement = $('<img class="modal-image">');
 imageElement.attr('src', item.imageUrl);
 let heightElement = $('<p>' + 'Height: ' + item.height + '</p>');
 let weightElement = $('<p>' + 'Weight: ' + item.weight + '</p>');
