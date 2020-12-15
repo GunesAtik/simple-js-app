@@ -33,3 +33,7 @@ body {
   text-transform: capitalize;
   text-align: center;
 }
+
+.btn-primary:hover {
+background-color: #5F9EA0 !important;
+}
