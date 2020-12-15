@@ -56,7 +56,7 @@ function loadDetails(item) {
   return fetch(url).then(function (response) {
     return response.json();
   }).then(function (details) {
-    item.imageUrl = details.sprites.front_default;
+    item.imageUrl = details.sprites.other.dream_world.front_default;
     item.height = details.height;
     item.weight = details.weight;
     item.types = details.types.map(function(pokemon) {
@@ -79,7 +79,7 @@ modalTitle.empty();
 modalBody.empty();
 
 let nameElement = $('<h1>' + item.name + '</h1>');
-let imageElement = $('<img class="modal-image">');
+let imageElement = $('<img class="modal-image style="width:50%">');
 imageElement.attr('src', item.imageUrl);
 let heightElement = $('<p>' + 'Height: ' + item.height + '</p>');
 let weightElement = $('<p>' + 'Weight: ' + item.weight + '</p>');
