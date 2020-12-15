@@ -3,12 +3,12 @@ let repository = [];
 let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 function add(pokemon) {
   if(
-    typeof pokemon === "object" &&
-    "name" in pokemon
+    typeof pokemon === 'object' &&
+    'name' in pokemon
   ){
    repository.push(pokemon);
  } else {
-   console.log("pokemon is not correct");
+   return('pokemon is not correct');
  }
 }
 
@@ -83,7 +83,7 @@ let imageElement = $('<img class="modal-image">');
 imageElement.attr('src', item.imageUrl);
 let heightElement = $('<p>' + 'Height: ' + item.height + '</p>');
 let weightElement = $('<p>' + 'Weight: ' + item.weight + '</p>');
-let typesElement = $('<p>' + 'Types: ' + item.types.join(", ") + '</p>');
+let typesElement = $('<p>' + 'Types: ' + item.types.join(',') + '</p>');
 
 modalTitle.append(nameElement);
 modalBody.append(imageElement);
